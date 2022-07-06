@@ -67,7 +67,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_ _ _ _ _" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AsI-98-u7L">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_ " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AsI-98-u7L">
                                 <rect key="frame" x="16" y="150.5" width="288" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Yrr-jh-P7s"/>
@@ -82,7 +82,11 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A6L-lF-9bD">
                                         <rect key="frame" x="0.0" y="0.0" width="32" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                        <connections>
+                                            <action selector="doneKeyPressed:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="NIE-ZX-puS"/>
+                                            <action selector="guessLetterFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="4Dj-so-kET"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpC-9P-aWT">
                                         <rect key="frame" x="40" y="1.5" width="119.5" height="31"/>
@@ -143,6 +147,7 @@
                         <outlet property="flowerImageView" destination="wwZ-MT-OSM" id="H5u-d0-4CL"/>
                         <outlet property="guessLetterButton" destination="bpC-9P-aWT" id="DZ1-pN-GPb"/>
                         <outlet property="guessLetterLabel" destination="AsI-98-u7L" id="tL7-BG-wMD"/>
+                        <outlet property="guessLetterTextField" destination="A6L-lF-9bD" id="Or9-4T-Gdk"/>
                         <outlet property="numberGuessesLabel" destination="Ejn-H1-VmI" id="jhk-iz-ylQ"/>
                         <outlet property="playAgainButton" destination="3lT-mm-uGp" id="YsR-hj-Tbp"/>
                         <outlet property="wordsGuessedLabel" destination="Qt3-59-5ZN" id="Lxv-9X-DqQ"/>
